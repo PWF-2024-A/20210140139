@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Todo;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
@@ -27,6 +28,6 @@ class DatabaseSeeder extends Seeder
             ]
         );
         User::factory(100)->create();
-        User::factory(500)->create();
+        Todo::factory(500)->create();
     }
 }
