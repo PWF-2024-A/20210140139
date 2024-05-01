@@ -105,8 +105,13 @@
                                                     </button>
                                                 </form>
                                             @endif
-                                            Route::delete('/user/{user}', [UserController::class,
-                                            'destroy'])->name('user.destroy');
+                                            <form action="{{ route('user.destroy', $user) }}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="text-red-600 dark:text-red-400">
+                                                    Delete
+                                                </button>
+                                            </form>
                                         </div>
                                     </td>
                                 </tr>
