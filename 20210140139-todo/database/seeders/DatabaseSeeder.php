@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Category;
 use App\Models\Todo;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -27,7 +28,41 @@ class DatabaseSeeder extends Seeder
                 'is_admin' => true
             ]
         );
+
+        User::create(
+            [
+                'name' => 'indah',
+                'email' => 'indah@indah.com',
+                'email_verified_at' => now(),
+                'password' => '12345678',
+                'remember_token' => Str::random(10),
+                'is_admin' => true
+            ]
+        );
+
+        User::create(
+            [
+                'name' => 'sarah',
+                'email' => 'sarah@sarah.com',
+                'email_verified_at' => now(),
+                'password' => '12345678',
+                'remember_token' => Str::random(10),
+                'is_admin' => true
+            ]
+        );
+
+        User::create(
+            [
+                'name' => 'den',
+                'email' => 'den@den.com',
+                'email_verified_at' => now(),
+                'password' => '12345678',
+                'remember_token' => Str::random(10),
+                'is_admin' => true
+            ]
+        );
         User::factory(100)->create();
         Todo::factory(500)->create();
+        Category::factory(100)->create();
     }
 }
